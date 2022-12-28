@@ -11,6 +11,7 @@ class GithubUser {
   int? followers;
   int? following;
   int? publicRepos;
+  String? organization;
 
   GithubUser({
     this.name,
@@ -25,6 +26,7 @@ class GithubUser {
     this.followers,
     this.following,
     this.publicRepos,
+    this.organization,
   });
 
   GithubUser.fromJson(Map<String, dynamic> apidata) {
@@ -40,5 +42,6 @@ class GithubUser {
     followers = apidata['followers'];
     following = apidata['following'];
     publicRepos = apidata['public_repos'];
+    organization = apidata['company'];
   }
 }

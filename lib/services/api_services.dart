@@ -6,9 +6,9 @@ import '../models/github_user_model.dart';
 
 class ApiServices {
   static const baseUrl = "https://api.github.com/users/";
-  static const authToken = "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";
+  static const authToken =
+      "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";
   // use your own auth token haiu mero use nagarw ani yesto api key haru xuttai safe ma rakhna aprxa haii version control ma najani tarika ley
-  
 
   Future<GithubUser> getGithubUserData(String userName) async {
     try {
@@ -19,6 +19,7 @@ class ApiServices {
         'Authorization': 'Bearer $authToken',
         // auth token
       });
+      print(response.reasonPhrase);
 
       print(response.headers);
       print("The stsus code is ${response.statusCode}");

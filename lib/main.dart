@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:github_user_app/screens/home_screen.dart';
 import 'package:github_user_app/services/api_services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        textTheme: GoogleFonts.spaceMonoTextTheme(),
+        // fontFamily: GoogleFonts.spaceMono(),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
